@@ -1,0 +1,36 @@
+.mainhoversection {
+    height: 900px;
+    width: 100%;
+  }
+  
+  .mainhoversection .mask,
+  .mainhoversection .bodyhoversection {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: #747474;
+    font-size: 64px;
+    line-height: 66px;
+    cursor: default;
+    background: #00040f;
+  }
+  
+  .mainhoversection .bodyhoversection p {
+    padding: 10px;
+  }
+  
+  .mainhoversection .bodyhoversection span {
+    color: #00aaf8;
+  }
+  
+  .mainhoversection .mask {
+    mask-image: url('../assets/maskEllipse.svg');
+    mask-repeat: no-repeat;
+    mask-size: 40px;
+    background: white;
+    position: absolute;
+    color: rgb(19, 59, 66);
+  }
+  
