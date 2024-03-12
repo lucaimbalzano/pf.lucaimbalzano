@@ -55,21 +55,21 @@ export const socialMedia = [
   {
     id: "social-media-1",
     icon: instagram,
-    link: "https://www.instagram.com/",
+    link: "https://www.instagram.com/lucas.imbalzano/",
   },
   {
     id: "social-media-2",
     icon: github,
-    link: "https://www.facebook.com/",
+    link: "https://github.com/lucaimbalzano",
   },
   {
     id: "social-media-3",
     icon: twitter,
-    link: "https://www.twitter.com/",
+    link: "https://twitter.com/lucaimbalzano",
   },
   {
     id: "social-media-4",
     icon: linkedin,
-    link: "https://www.linkedin.com/",
+    link: "https://www.linkedin.com/in/luca-imbalzano-37a328172/",
   },
 ];

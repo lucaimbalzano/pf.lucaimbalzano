@@ -12,7 +12,7 @@ const HomePage = () => {
       >
         <div className="flex flex-row items-center py-[6px] px-4  rounded-[10px] mb-2"></div>
 
-        <div className="flex flex-row justify-between items-center w-full">
+        <div className="flex flex-row justify-between items-center w-full pt-10">
           <h1 className="flex-1 font-poppins font-semibold ss:text-[120px] xs:text-[120px] xxs:text-[80px] text-[52px] text-white 2xl:leading-[130.8px] ss:leading-[110.8px] xs:leading-[110.8px] leading-[75px] ">
             Impact the <br className="sm:block hidden" />{" "}
             <span className="text-gradient xs:text-[120px]">future</span>{" "}
@@ -27,7 +27,7 @@ const HomePage = () => {
         </p>
       </div>
 
-      <div className="flex-1 md:h-auto h-full md:flex md:items-center md:justify-center my-0 md:my-10 relative">
+      <div className="flex-1 md:h-auto h-full md:flex md:items-center md:justify-center my-0 md:my-10">
         <Spline scene="https://prod.spline.design/Y2G4uvj5Ge3Sd0XL/scene.splinecode" />
       </div>
     </section>
