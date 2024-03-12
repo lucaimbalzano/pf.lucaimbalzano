@@ -27,7 +27,7 @@ const App = () => (
       <div className={`${styles.boxWidth}`}>
         <Stack />
         <Clients />
-        <HoverSection />
+        {/* <HoverSection /> */}
         <TerminalSimulator />
         <Footer />
       </div>
