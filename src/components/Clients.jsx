@@ -42,7 +42,7 @@ export default function Clients() {
         <p className=" text-gray-500"> i WORKED FOR</p>
       </div>
       <section
-        className={`bg-primary ${styles.flexCenter} h-full ${styles.flexCenter} flex-wrap w-full `}
+        className={`bg-primary ${styles.flexCenter} h-full ${styles.flexCenter} flex-wrap w-full xxs:mb-10`}
       >
         <motion.div ref={carousel} whileTap={{ cursor: "grabbing" }}>
           <div
@@ -63,7 +63,7 @@ export default function Clients() {
                       initial={"hiddenLeft"}
                       animate="visible"
                       exit="exit"
-                      width="150px"
+                      width="165px"
                       height="100px"
                     />
                   </motion.div>

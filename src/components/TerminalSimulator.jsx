@@ -1,7 +1,7 @@
 import { terminal } from "../assets";
 import stackImgs from "../assets/index";
 import styles, { layout } from "../style";
-import React, { Component, useEffect } from "react";
+import React, { Component, useEffect, useState } from "react";
 import Terminal from "react-console-emulator";
 
 const commands = {
@@ -11,9 +11,13 @@ const commands = {
     fn: (...args) => args.join(" "),
   },
   sudo: {
-    description: "Sudo, please don't sweat.",
-    usage: "sudo <string>",
-    fn: (...args) => args.join(" oh no! You are not a root :)"),
+    description:
+      "Sudo, please don't sweat.. or maybe sweat is another command?",
+    usage: "sudo <command>",
+    fn: (...args) => {
+      const command = args.shift(); // Extract the command from args
+      return `Executing ${command} as root...`; // Modify the output message accordingly
+    },
   },
   rm: {
     description: "You feel you can destroy everything?",
@@ -21,9 +25,23 @@ const commands = {
     fn: (...args) =>
       args.join("? Maybe is time to think on build something instead destroy."),
   },
+  ls: {
+    description: "List files and directories in the current directory.",
+    fn: () => "file1 file2 file3 directory1 directory2",
+  },
+  pwd: {
+    description: "Print the current working directory.",
+    fn: () => "/home/user",
+  },
+  cd: {
+    description: "Change directory.",
+    usage: "cd <directory>",
+    fn: (directory) => `Changed directory to ${directory}`,
+  },
 };
 
 export default function TerminalSimulator() {
+  const [easterEgg, setEasterEgg] = useState(false);
   useEffect(() => {
     const text = `.𝕝𝕦𝕔𝕒𝕚𝕞𝕓𝕒𝕝𝕫𝕒𝕟𝕠
 
@@ -41,25 +59,40 @@ export default function TerminalSimulator() {
 
     console.log(
       text +
-        "\n💡Hai gia provato il comando %c01110011 01110101 01100100 01101111?",
+        "\n💡Hai gia provato il comando %c01110011 01110101 01100100 01101111 per eliminare qualcuno?",
       "color: red"
     );
   }, []);
+
+  const handleCommand = (input) => {
+    if (input.rawInput === "sweat rm -rf lucaimbalzano") {
+      setEasterEgg(true);
+    }
+    return `Command not found: ${input}`;
+  };
 
   return (
     <section
       id="terminal"
       className={`${layout.sectionReverse} bg-primary text-white h-screen`}
     >
+      {easterEgg && (
+        <p className="text-center mt-5 text-cyan-600 opacity-60">
+          🎉 Congratulations! You found the easter egg! <br /> Essentially you
+          destroy me.
+        </p>
+      )}
       <div className={layout.sectionImgReverse}>
         <Terminal
-          className="p-8 xxs:w-[320px] xs:w-[80%] h-[55%]"
+          className="p-8 xs:w-[80%] h-[55%]"
           commands={commands}
           welcomeMessage={"💡 Welcome to my terminal!"}
           promptLabel={"root@lucaimbalzano:~$"}
+          commandCallback={handleCommand}
+          contentClassName={easterEgg ? styles.easterEgg : ""}
         />
       </div>
-      <div className={layout.sectionInfo}>
+      <div className={`${layout.sectionInfo}`}>
         <h2 className={`${styles.heading2Section2} xxs:text-[40px]`}>
           Find the <br className="sm:block hidden" />
           🐰 easter egg

@@ -10,7 +10,10 @@ const Stack = () => {
   const stackIcons = Object.values(stackImgs);
 
   return (
-    <section id="stack" className={`${layout.section}`}>
+    <section
+      id="stack"
+      className={`xs:mt-48  sm:mt-72  md:mt-0 ${layout.section}`}
+    >
       <p className="uppercase text-gray-500"> ABOUT</p>
       <div className={layout.sectionInfo}>
         <h2 className={`${styles.heading2}`}>
