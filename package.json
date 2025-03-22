@@ -3,7 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "author": {"name": "lucaimbalzano"},
+  "author": {
+    "name": "lucaimbalzano"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
