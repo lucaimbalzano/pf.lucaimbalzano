@@ -5,10 +5,10 @@ export const navLinks = [
     id: "home",
     title: "Home",
   },
-  {
-    id: "stack",
-    title: "Stack",
-  },
+  // {
+  //   id: "stack",
+  //   title: "Stack",
+  // },
   {
     id: "terminal",
     title: "Terminal",

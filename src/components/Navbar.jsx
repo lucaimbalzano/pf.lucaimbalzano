@@ -23,7 +23,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="w-full flex py-6 justify-between items-center backdrop-blur-md navbar">
+    <nav className="w-full flex py-6 justify-between items-center backdrop-blur-md navbar pl-8 pr-8 z-[100] fixed">
       {/* <img src={logo} alt="pflucaimbalzano" className="w-[84px] h-[72px]" /> */}
       <div
         className={`flex items-center justify-center ${

@@ -20,13 +20,11 @@ export default function App() {
   }, [screenWidth]);
   return (
     <div className="bg-primary w-full overflow-hidden">
-      <div
-        className={`${styles.paddingXNav} ${styles.flexCenter} fixed w-full`}
-      >
-        <div className={`${styles.boxWidth}`}>
-          <Navbar />
+        <div className={`${styles.flexCenter} fixed w-full`}>
+          <div className="w-full">
+            <Navbar />
+          </div>
         </div>
-      </div>
 
       <div className={`bg-primary ${styles.flexStart} pt-10`}>
         <div className={`${styles.boxWidth}`}>
@@ -38,7 +36,7 @@ export default function App() {
         <div className={`${styles.boxWidth}`}>
           <Stack />
           <Clients />
-          {isWidthMd && <HoverSection />}
+          {isWidthMd && <HoverSection />}          
           <TerminalSimulator />
           <Footer />
         </div>

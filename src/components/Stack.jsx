@@ -33,7 +33,7 @@ const Stack = () => {
   return (
     <section
       id="stack"
-      className={`xs:mt-48 sm:mt-72 md:mt-0 ${layout.section}`}
+      className={`xs:mt-48 sm:mt-72 md:mt-0 ${layout.section} z-[-99]`}
     >
       <p className="uppercase text-gray-500">ABOUT</p>
       <div className={layout.sectionInfo}>
